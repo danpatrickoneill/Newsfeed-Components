@@ -20,7 +20,7 @@ class Article {
   expandArticle() {
     // Using our reference to the domElement, toggle a class to expand or hide the article.
     console.log("Clicking the span");
-    TweenMax.to(this.domElement, .5, {className: "+=article-open"})
+    TweenMax.to(this.domElement, 2, {ease: Elastic.easeOut, className: "+=article-open"})
     this.expandButton.textContent = 'Double-Click to Collapse';
   }
 
@@ -33,7 +33,7 @@ class Article {
 
   closeArticle() {
     // this.domElement.style.display = 'none'
-    TweenMax.to(this.domElement, .5, {display: 'none', opacity: 0})
+    TweenMax.to(this.domElement, .6, {display: 'none', opacity: 0})
   }
 }
 
